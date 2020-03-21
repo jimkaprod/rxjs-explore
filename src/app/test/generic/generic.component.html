@@ -5,3 +5,12 @@
     {{season.name}}
   </li>
 </ul>
+
+<mat-form-field>
+  <mat-label>Seasons</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let season of seasons$ | async" [value]="season.id">
+      {{season.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
