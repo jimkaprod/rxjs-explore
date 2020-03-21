@@ -1,0 +1,5 @@
+[
+{"id":"1","name":"User","default":"1","permissions":"7"},
+{"id":"2","name":"Moderator","default":"0","permissions":"15"},
+{"id":"3","name":"Administrator","default":"0","permissions":"31"}
+]

@@ -1,0 +1,12 @@
+[
+{"id":"1","name":"afrique","abbreviation":"afr"},
+{"id":"2","name":"amerique","abbreviation":"ame"},
+{"id":"3","name":"amerique nord","abbreviation":"amn"},
+{"id":"4","name":"amerique centrale","abbreviation":"amc"},
+{"id":"5","name":"amerique sud","abbreviation":"ams"},
+{"id":"6","name":"asie océanie","abbreviation":"aso"}
+,
+{"id":"7","name":"Équipes classiques","abbreviation":"eqc"}
+,
+{"id":"8","name":"europe","abbreviation":"eur"}
+]
