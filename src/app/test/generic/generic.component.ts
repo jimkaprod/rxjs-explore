@@ -8,6 +8,54 @@ export interface Season {
   name: string;
 }
 
+export interface Zone {
+  id: number;
+  name: string;
+  abbreviation: string;
+}
+
+export interface VideoGame {
+  id: number;
+  name: string;
+}
+
+export interface TeamType {
+  id: number;
+  name: string;
+}
+
+export interface TeamName {
+  id: number;
+  realName: string;
+  pesName: string;
+}
+
+export interface TeamLevel {
+  id: number;
+  name: number;
+}
+
+export interface Countries {
+  id: number;
+  name: string;
+  abbreviation: string;
+}
+
+export interface CompetitionType {
+  id: number;
+  name: string;
+}
+
+export interface CompetitionName {
+  id: number;
+  name: string;
+}
+
+export interface CompetitionCategory {
+  id: number;
+  name: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +63,17 @@ export interface Season {
 export class AllServices {
 
   seasons$: Observable<Season[]>
+  zone$: Observable<Zone[]>
+  videoGame$: Observable<VideoGame[]>
+  teamType$: Observable<TeamType[]>
+  teamName$: Observable<TeamName[]>
+  teamLevel$: Observable<TeamLevel[]>
+  countries$: Observable<Countries[]>
+  competitionType$: Observable<CompetitionType[]>
+  competitionName$: Observable<CompetitionName[]>
+  competitionCategories$: Observable<CompetitionCategory[]>
+
+
 
   // private subject = new BehaviorSubject<Course[]>([]);
   // courses$: Observable<Course[]> = this.subject.asObservable();
@@ -33,6 +92,86 @@ export class AllServices {
       );
   }
 
+  getZones() {
+    const http$ = createHttpObservable('/api/zones');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getVideosGames() {
+    const http$ = createHttpObservable('/api/videosGames');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getTeamsTypes() {
+    const http$ = createHttpObservable('/api/teamsTypes');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getTeamsLevel() {
+    const http$ = createHttpObservable('/api/teamsLevels');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getTeamsNames() {
+    const http$ = createHttpObservable('/api/teamsNames');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getCountries() {
+    const http$ = createHttpObservable('/api/countries');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getCompetitionsTypes() {
+    const http$ = createHttpObservable('/api/competitionsTypes');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getCompetitionsNames() {
+    const http$ = createHttpObservable('/api/competitionsNames');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
+
+  getCompetitionsCategories() {
+    const http$ = createHttpObservable('/api/competitionsCategories');
+    return http$
+      .pipe(
+        tap(() => console.log("HTTP request executed")),
+        map(res => Object.values(res["payload"])),
+      );
+  }
 
 }
 
@@ -41,9 +180,19 @@ export class AllServices {
   templateUrl: './generic.component.html',
   styleUrls: ['./generic.component.scss']
 })
+
 export class GenericComponent implements OnInit {
 
-  seasons$: Observable<Season[]>;
+  seasons$: Observable<Season[]>
+  zones$: Observable<Zone[]>
+  videosGames$: Observable<VideoGame[]>
+  teamsTypes$: Observable<TeamType[]>
+  teamsNames$: Observable<TeamName[]>
+  teamsLevels$: Observable<TeamLevel[]>
+  countries$: Observable<Countries[]>
+  competitionsTypes$: Observable<CompetitionType[]>
+  competitionsNames$: Observable<CompetitionName[]>
+  competitionsCategories$: Observable<CompetitionCategory[]>
 
 
 
@@ -54,7 +203,15 @@ export class GenericComponent implements OnInit {
   ngOnInit(): void {
 
     this.seasons$ = this.as.getSeasons();
-
+    this.zones$ = this.as.getZones();
+    this.videosGames$ = this.as.getVideosGames();
+    this.teamsTypes$ = this.as.getTeamsTypes();
+    this.teamsLevels$ = this.as.getTeamsLevel();
+    this.teamsNames$ = this.as.getTeamsNames();
+    this.countries$ = this.as.getCountries();
+    this.competitionsTypes$ = this.as.getCompetitionsTypes();
+    this.competitionsCategories$ = this.as.getCompetitionsCategories();
+    this.competitionsNames$ = this.as.getCompetitionsNames();
 
   }
 

@@ -5,7 +5,7 @@ import { getAllCourses, getCourseById } from "./get-courses.route";
 import { searchLessons } from "./search-lessons.route";
 import { saveCourse } from './save-course.route';
 /////////////////////////////////////////////
-import { getZones, getZonesNames } from "./zones.route";
+import { getZones } from "./zones.route";
 import { getCompetitions, getCompetitionsCategories, getCompetitionsTypes, getCompetitionsNames } from "./competitions.route";
 import { getVideosGames } from "./videos_games.route";
 import { getUsers } from "./users.route";
@@ -34,8 +34,6 @@ app.route('/api/lessons').get(searchLessons);
 app.route('/api/courses/:id').put(saveCourse);
 //////////////////////////////////////////////
 app.route('/api/zones').get(getZones);
-
-app.route('/api/zonesNames').get(getZonesNames);
 
 app.route('/api/competitions').get(getCompetitions);
 

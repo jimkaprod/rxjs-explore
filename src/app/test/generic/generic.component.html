@@ -1,16 +1,86 @@
 <p>generic works!</p>
 
-<ul>
-  <li *ngFor='let season of seasons$ | async'>
-    {{season.name}}
-  </li>
-</ul>
-
 <mat-form-field>
   <mat-label>Seasons</mat-label>
   <mat-select>
     <mat-option *ngFor="let season of seasons$ | async" [value]="season.id">
       {{season.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Zones</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let zone of zones$ | async" [value]="zone.id">
+      {{zone.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Competitions Categories</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let category of competitionsCategories$ | async" [value]="category.id">
+      {{category.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Competitions Types</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let type of competitionsTypes$ | async" [value]="type.id">
+      {{type.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Competitions Names</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let name of competitionsNames$ | async" [value]="name.id">
+      {{name.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>Countries</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let country of countries$ | async" [value]="country.id">
+      {{country.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+<mat-form-field>
+  <mat-label>Teams Names</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let name of teamsNames$ | async" [value]="name.id">
+      {{name.real_name}}
+      {{name.pes_name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Teams Levels</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let level of teamsLevels$ | async" [value]="level.id">
+      {{level.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Teams Types</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let type of teamsTypes$ | async" [value]="type.id">
+      {{type.name}}
     </mat-option>
   </mat-select>
 </mat-form-field>

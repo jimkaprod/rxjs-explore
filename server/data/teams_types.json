@@ -1,5 +1,13 @@
-[
-{"id":"1","type":"all star"},
-{"id":"0","type":"club"},
-{"id":"2","type":"country"}
+[{
+    "id": "1",
+    "name": "all star"
+  },
+  {
+    "id": "0",
+    "name": "club"
+  },
+  {
+    "id": "2",
+    "name": "country"
+  }
 ]
