@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
-
+@import '../node_modules/@angular/material/theming';
 
 html,
 body {
@@ -10,4 +10,51 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+h3,
+h2 {
+  color: white;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+  color: white;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-container * {
+  border: 0px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid-container {
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". . . . . . . ."". . . . . . . ."". . . . . . . .";
 }

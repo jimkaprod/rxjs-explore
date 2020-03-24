@@ -1,0 +1,10 @@
+<h3>{{title}}</h3>
+
+<mat-button-toggle-group #group="matButtonToggleGroup" multiple="true" (change)="onChange(group)" class="" style="display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; border:0px">
+  <mat-button-toggle *ngFor="let item of values | async" [value]="[item.id,item.name]" style="border: 1px solid black;
+  font-size:12px;
+  ">
+    {{item.name  | truncate:[14, '...']}}
+  </mat-button-toggle>
+</mat-button-toggle-group>

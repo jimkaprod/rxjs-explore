@@ -2,59 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, from, Observable } from 'rxjs';
 import { map, tap, filter } from 'rxjs/operators';
+import { Season } from "../../model/season.interface";
+import { Zone } from "../../model/zone.interface";
+import { CompetitionCategory } from "../../model/competition-category.interface";
+import { CompetitionName } from "../../model/competition-name.interface";
+import { CompetitionType } from "../../model/competition-type.interface";
+import { Countries } from "../../model/country.interface";
+import { TeamLevel } from "../../model/team-level.interface";
+import { TeamName } from "../../model/team-name.interface";
+import { TeamType } from "../../model/team-type.interface";
+import { VideoGame } from "../../model/video-game.interface";
 
-export interface Season {
-  id: number;
-  name: string;
-}
-
-export interface Zone {
-  id: number;
-  name: string;
-  abbreviation: string;
-}
-
-export interface VideoGame {
-  id: number;
-  name: string;
-}
-
-export interface TeamType {
-  id: number;
-  name: string;
-}
-
-export interface TeamName {
-  id: number;
-  realName: string;
-  pesName: string;
-}
-
-export interface TeamLevel {
-  id: number;
-  name: number;
-}
-
-export interface Countries {
-  id: number;
-  name: string;
-  abbreviation: string;
-}
-
-export interface CompetitionType {
-  id: number;
-  name: string;
-}
-
-export interface CompetitionName {
-  id: number;
-  name: string;
-}
-
-export interface CompetitionCategory {
-  id: number;
-  name: number;
-}
 
 @Injectable({
   providedIn: 'root'

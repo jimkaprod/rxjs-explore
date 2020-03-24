@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/teams/filter/filter.component.scss"
+    ],
+    "names": [],
+    "file": "filter.component.css"
+}

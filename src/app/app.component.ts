@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rxjs-explore';
+  componentTitle = "Competition type"
+  componentValues = [
+    { "id": "1", "name": "international" },
+    { "id": "2", "name": "continental" },
+    { "id": "3", "name": "national" }
+  ];
+
+
 }
