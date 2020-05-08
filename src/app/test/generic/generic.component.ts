@@ -7,7 +7,7 @@ import { Zone } from "../../model/zone.interface";
 import { CompetitionCategory } from "../../model/competition-category.interface";
 import { CompetitionName } from "../../model/competition-name.interface";
 import { CompetitionType } from "../../model/competition-type.interface";
-import { Countries } from "../../model/country.interface";
+import { Country } from "../../model/country.interface";
 import { TeamLevel } from "../../model/team-level.interface";
 import { TeamName } from "../../model/team-name.interface";
 import { TeamType } from "../../model/team-type.interface";
@@ -26,7 +26,7 @@ export class AllServices {
   teamType$: Observable<TeamType[]>
   teamName$: Observable<TeamName[]>
   teamLevel$: Observable<TeamLevel[]>
-  countries$: Observable<Countries[]>
+  countries$: Observable<Country[]>
   competitionType$: Observable<CompetitionType[]>
   competitionName$: Observable<CompetitionName[]>
   competitionCategories$: Observable<CompetitionCategory[]>
@@ -147,7 +147,7 @@ export class GenericComponent implements OnInit {
   teamsTypes$: Observable<TeamType[]>
   teamsNames$: Observable<TeamName[]>
   teamsLevels$: Observable<TeamLevel[]>
-  countries$: Observable<Countries[]>
+  countries$: Observable<Country[]>
   competitionsTypes$: Observable<CompetitionType[]>
   competitionsNames$: Observable<CompetitionName[]>
   competitionsCategories$: Observable<CompetitionCategory[]>
