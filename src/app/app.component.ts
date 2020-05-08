@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rxjs-explore';
+  title = 'pes_project';
   componentTitle = "Competition type"
   componentValues = [
     { "id": "1", "name": "international" },
